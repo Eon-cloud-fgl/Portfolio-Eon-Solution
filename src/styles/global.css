@@ -1,7 +1,11 @@
 * {
   box-sizing: border-box;
 }
-
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .container {
   padding: 0;
   margin: 0;
@@ -18,7 +22,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   min-height: 100vh;
-  background-color: var(--background);
+  background-color: black;
 }
 
 a {

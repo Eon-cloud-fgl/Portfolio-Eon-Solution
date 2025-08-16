@@ -1,3 +1,7 @@
 main {
   flex: 1;
 }
+html,
+body {
+   color: white;
+}

@@ -1,19 +1,22 @@
 /* === NAVBAR BASE === */
 .nav-glass {
   position: sticky;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.25);
+  top: 10px;
+  width: 50%;
+  height: 60px;
+  border-radius: 30px;
+  transform: translateX(-50%);
+  left: 50%;
+  background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: space-between;
-  padding: 0.8rem 2rem; 
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(150, 150, 150, 0.08);
   transition: all 0.3s ease;
 }
 
@@ -21,9 +24,10 @@
 .nav-logo {
   display: flex;
   align-items: center;
+  padding-left: 20px;
 }
 #logo {
-  height: 60px;
+  height: 100px;
   transition: transform 0.3s ease;
 }
 #logo:hover {
@@ -35,7 +39,11 @@
   display: flex;
   gap: 1.8rem;
   list-style: none;
+  width: 100%;
   align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links li {
@@ -60,18 +68,17 @@
 
 /* Hover con glow */
 .nav-links li:hover {
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 200, 255, 0.15));
+  background: linear-gradient(135deg, #ffffff, #eeeeee);
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 4px 15px rgba(0,123,255,0.15);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
 }
 
 /* Activo */
 .nav-links li.active {
-  background: linear-gradient(135deg, #007bff, #00c8ff);
-  box-shadow: 0 4px 15px rgba(0,123,255,0.25);
+  background: transparent;
 }
 .nav-links li.active a {
-  color: #fff;
+  color: #ffffff;
 }
 
 .nav-links svg {
