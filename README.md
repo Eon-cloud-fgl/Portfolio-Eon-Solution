@@ -1,12 +1,31 @@
-# React + Vite
+# 🌐 Eon-Solutions – Desarrollo Web Creativo y Profesional  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En **Eon-Solutions** nos apasiona crear experiencias digitales modernas, intuitivas y con identidad propia.  
+Nuestro equipo combina lo mejor de las tecnologías actuales para dar vida a sitios web atractivos, funcionales y optimizados. ⚡  
 
-Currently, two official plugins are available:
+## 💻 Tecnologías utilizadas  
+- **Lenguajes de Programación:**  
+  - JavaScript  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frameworks:**  
+  - React ⚛️  
 
-## Expanding the ESLint configuration
+- **Lenguajes de Maquetado y Estilo:**  
+  - HTML5  
+  - CSS3 🎨  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✨ **¿Qué nos diferencia?**  
+No solo desarrollamos páginas web, sino que buscamos transmitir cercanía, profesionalismo y creatividad en cada línea de código.  
+Cada proyecto es una oportunidad para demostrar nuestras **habilidades técnicas** y nuestra **experiencia en programación**, siempre con la calidez de un trato humano.  
+
+## 🚀 Nuestro objetivo  
+Queremos mostrar al mundo de lo que somos capaces:  
+- Sitios web modernos, rápidos y responsivos.  
+- Interfaces amigables que enamoran al usuario.  
+- Soluciones personalizadas que se adaptan a cada necesidad.  
+
+🤝 Creemos en la tecnología como un puente entre las ideas y la realidad digital.  
+
+## 📬 Contacto  
+Desarrollado por **Eon-Solutions Team**  
+Consultas o colaboración: **eon.solutions.fgl@gmail.com**
