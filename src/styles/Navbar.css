@@ -1,0 +1,154 @@
+/* === NAVBAR BASE === */
+.nav-glass {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem; 
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* LOGO */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+#logo {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+#logo:hover {
+  transform: scale(1.05);
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a {
+  display: flex;
+  gap: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: #222;
+  letter-spacing: 0.4px;
+  transition: color 0.3s ease;
+}
+
+/* Hover con glow */
+.nav-links li:hover {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 200, 255, 0.15));
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,123,255,0.15);
+}
+
+/* Activo */
+.nav-links li.active {
+  background: linear-gradient(135deg, #007bff, #00c8ff);
+  box-shadow: 0 4px 15px rgba(0,123,255,0.25);
+}
+.nav-links li.active a {
+  color: #fff;
+}
+
+.nav-links svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+/* === RESPONSIVE === */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #222;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 1024px) {
+  .nav-glass {
+    padding: 0.8rem 1.5rem;
+  }
+  #logo {
+    height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .nav-links.open {
+    max-height: 600px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #logo {
+    height: 45px !important;
+  }
+  .nav-glass {
+    padding: 0.6rem 1rem;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}
