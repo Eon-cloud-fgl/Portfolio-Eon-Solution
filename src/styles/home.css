@@ -6,6 +6,7 @@ body {
   color: white;
 }
 
+/*Contenedor del banner modificado para tener mas flexibilidad de manipulacion en el banner*/
 .banner{
   display: flex; 
   align-items: center; 
@@ -13,7 +14,8 @@ body {
   width: 100%;
 }
 
-.banner-content {
+/*Contenedor del titulo y la frase*/
+.title-content {
   flex: 1; 
   padding: 34px; 
   color: #fff; 
@@ -21,6 +23,7 @@ body {
   box-sizing: border-box; 
 }
 
+/*Contenedor del video para manipular dimensiones*/
 .banner-video-container {
   width: 100%; /* O el ancho deseado para el video */
   height: 150%; /* O la altura que necesites */
@@ -28,6 +31,7 @@ body {
   overflow: hidden; /* Recorta si el contenido excede */
 }
 
+/*Contenedor del video directo para manipular mejor dimensiones y direccion*/
 .banner-video {
     display: block;
     width: 100%;

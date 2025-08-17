@@ -28,9 +28,10 @@ function Banner(){
     }, []); // El array vacio [] hace que este efecto se ejecute solo una vez al iniciar el componente
     
 
+    // Renderizamos el banner con el video con texto de bienvenida y frase
     return (
         <div className="banner">
-            <div className="banner-content">
+            <div className="title-content">
                 <h1>Te damos la bienvenida a Eon Solutions</h1>
                 <p>Inverti en soluciones, nosotros te las proponemos</p>
             </div>
