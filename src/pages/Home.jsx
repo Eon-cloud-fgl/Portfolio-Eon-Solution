@@ -13,16 +13,20 @@ export default function Home(){
 }
 
 function Banner(){
+    
+    // Logica para pausar el video despues de 15 segundos
     const videoRef = useRef(null);
     useEffect(() => {
         const video = videoRef.current;
         if (video) {
             const timer = setTimeout(() => {
-                
-            })
+                video.pause(); // Pausamos el video despues de 3 segundos
+            }, 15000) // 15000 milisegundos = 15 segundos
+        
+            return () => clearTimeout(timer); // Limpiamos el timer al desmontar el componente
         }
-    }
-
+    }, []); // El array vacio [] hace que este efecto se ejecute solo una vez al iniciar el componente
+    
 
     return (
         <div className="banner">
@@ -32,7 +36,7 @@ function Banner(){
             </div>
 
             <div className="banner-video-container">
-                <video className='banner-video' autoPlay loop muted>
+                <video ref={videoRef} className='banner-video' autoPlay loop muted>
                     <source src="/animacion_inicial.mp4" type="video/mp4" />
                 </video>
             </div>
