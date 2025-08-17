@@ -3,5 +3,34 @@ main {
 }
 html,
 body {
-   color: white;
+  color: white;
+}
+
+.banner{
+  display: flex; 
+  align-items: center; 
+  height: 500px; 
+  width: 100%;
+}
+
+.banner-content {
+  flex: 1; 
+  padding: 34px; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  box-sizing: border-box; 
+}
+
+.banner-video-container {
+  width: 100%; /* O el ancho deseado para el video */
+  height: 150%; /* O la altura que necesites */
+  box-sizing: border-box; /* Incluye el padding en el ancho */
+  overflow: hidden; /* Recorta si el contenido excede */
+}
+
+.banner-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
