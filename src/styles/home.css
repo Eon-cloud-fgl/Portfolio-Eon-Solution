@@ -3,5 +3,38 @@ main {
 }
 html,
 body {
-   color: white;
+  color: white;
+}
+
+/*Contenedor del banner modificado para tener mas flexibilidad de manipulacion en el banner*/
+.banner{
+  display: flex; 
+  align-items: center; 
+  height: 500px; 
+  width: 100%;
+}
+
+/*Contenedor del titulo y la frase*/
+.title-content {
+  flex: 1; 
+  padding: 34px; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  box-sizing: border-box; 
+}
+
+/*Contenedor del video para manipular dimensiones*/
+.banner-video-container {
+  width: 100%; /* O el ancho deseado para el video */
+  height: 150%; /* O la altura que necesites */
+  box-sizing: border-box; /* Incluye el padding en el ancho */
+  overflow: hidden; /* Recorta si el contenido excede */
+}
+
+/*Contenedor del video directo para manipular mejor dimensiones y direccion*/
+.banner-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
