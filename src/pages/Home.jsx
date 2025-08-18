@@ -15,9 +15,10 @@ export default function Home(){
 function Banner(){
     
     // Logica para pausar el video despues de 15 segundos
-    const videoRef = useRef(null);
+    const videoRef = useRef(null); // Creamo la referencia con un valor mutable inicial de null
     useEffect(() => {
-        const video = videoRef.current;
+        const video = videoRef.current; // Creamos una constante que va a contener la referencia al video
+        // Si el video existe, configuramos un timer para pausarlo
         if (video) {
             const timer = setTimeout(() => {
                 video.pause(); // Pausamos el video despues de 3 segundos
