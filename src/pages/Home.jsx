@@ -37,24 +37,6 @@ function Banner() {
 }
 
 
-
-function Title() {
-    return (
-        <motion.div
-            className="title-content"
-            initial={{ x: -200, opacity: 0 }}   // arranca fuera de pantalla a la izquierda
-            animate={{ x: 0, opacity: 1 }}      // termina en su posición normal
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} // animación suave
-        >
-            <p className='title-welcome'>Te damos la bienvenida a </p>
-            <h1>Eon Solutions</h1>
-            <p>Invertí en soluciones, nosotros te las proponemos</p>
-            <button>Conta con Nosotros</button>
-        </motion.div>
-    );
-}
-
-
 export default function Home() {
     return (
         <>
