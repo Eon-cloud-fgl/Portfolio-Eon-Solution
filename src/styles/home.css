@@ -1,40 +1,71 @@
-main {
-  flex: 1;
-}
 html,
 body {
   color: white;
 }
-
-/*Contenedor del banner modificado para tener mas flexibilidad de manipulacion en el banner*/
-.banner{
-  display: flex; 
-  align-items: center; 
-  height: 500px; 
-  width: 100%;
-}
-
-/*Contenedor del titulo y la frase*/
-.title-content {
-  flex: 1; 
-  padding: 34px; 
-  color: #fff; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-  box-sizing: border-box; 
-}
-
-/*Contenedor del video para manipular dimensiones*/
 .banner-video-container {
-  width: 100%; /* O el ancho deseado para el video */
-  height: 150%; /* O la altura que necesites */
-  box-sizing: border-box; /* Incluye el padding en el ancho */
-  overflow: hidden; /* Recorta si el contenido excede */
+  width: 100%; 
+  height: 100vh; 
+  box-sizing: border-box; 
+  overflow: hidden; 
 }
-
-/*Contenedor del video directo para manipular mejor dimensiones y direccion*/
 .banner-video {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100vh;
     object-fit: cover;
+}
+@keyframes titleAnimation1 {
+  0% {
+    left: 25%;
+    opacity: 0;
+  }
+  100% {
+    left: 45%;
+    opacity: 1;
+  }
+}
+
+.title-content-1{
+    position: absolute;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    top: 45%;
+    left: 50%;
+    width: 200px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+    border-radius: 14px;
+    animation: titleAnimation1 6s ease-in-out forwards;
+    z-index: 1000;
+}
+
+@keyframes titleAnimation2 {
+  0% {
+    left: 75%; 
+    opacity: 0;
+  }
+  100% {
+    left: 53%;
+    opacity: 1;
+  }
+}
+
+.title-content-2 {
+    position: absolute;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    top: 55%; 
+    left: 50%;
+    width: 200px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+    border-radius: 14px;
+    animation: titleAnimation2 6s ease-in-out forwards;
+    z-index: 999;
 }

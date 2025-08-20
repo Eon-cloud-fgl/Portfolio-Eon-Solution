@@ -1,4 +1,4 @@
-import '../styles/home.css';
+import '../styles/Home.css';
 import React, { useRef, useEffect } from 'react';
 
 
@@ -22,7 +22,7 @@ function Banner(){
         if (video) {
             const timer = setTimeout(() => {
                 video.pause(); // Pausamos el video despues de 3 segundos
-            }, 15000) // 15000 milisegundos = 15 segundos
+            }, 10000) // 15000 milisegundos = 15 segundos
         
             return () => clearTimeout(timer); // Limpiamos el timer al desmontar el componente
         }
@@ -32,11 +32,12 @@ function Banner(){
     // Renderizamos el banner con el video con texto de bienvenida y frase
     return (
         <div className="banner">
-            <div className="title-content">
-                <h1>Te damos la bienvenida a Eon Solutions</h1>
-                <p>Inverti en soluciones, nosotros te las proponemos</p>
+            <div className="title-content-1">
+                <h1>Eon</h1>
             </div>
-
+            <div className="title-content-2">
+                <h1>Solutions</h1>
+            </div>
             <div className="banner-video-container">
                 <video ref={videoRef} className='banner-video' autoPlay loop muted>
                     <source src="/animacion_inicial.mp4" type="video/mp4" />
