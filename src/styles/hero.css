@@ -1,0 +1,132 @@
+/* Hero Section */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: var(--gradient-mixed); /* Violeta → Azul → Verde */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-light);
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-content {
+  z-index: 10;
+  max-width: 800px;
+}
+
+.text-hero{
+  padding: 0;
+  margin: 0;
+}
+
+.glitch {
+  font-size: 4rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  color: var(--text-light);
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px var(--primary-blue), 
+               0 0 10px var(--primary-green), 
+               0 0 15px var(--primary-purple);
+  animation: flicker 3s infinite;
+}
+
+/* Capas glitch */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  opacity: 0.8;
+}
+
+/* Verde desplazado */
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--primary-green);
+  animation: glitchTop 2.5s infinite linear alternate-reverse;
+  color: var(--primary-green);
+}
+
+/* Azul + violeta desplazados */
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--primary-blue), 2px 2px var(--primary-purple);
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+/* Animación glitch superior */
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  5% { clip: rect(5px, 9999px, 25px, 0); transform: translate(-3px, -2px); }
+  10% { clip: rect(50px, 9999px, 90px, 0); transform: translate(3px, 0); }
+  15% { clip: rect(30px, 9999px, 60px, 0); transform: translate(-5px, 2px); }
+  20% { clip: rect(80px, 9999px, 120px, 0); transform: translate(5px, -2px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+/* Animación glitch inferior */
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  5% { clip: rect(60px, 9999px, 100px, 0); transform: translate(3px, 2px); }
+  10% { clip: rect(20px, 9999px, 70px, 0); transform: translate(-3px, 0); }
+  15% { clip: rect(40px, 9999px, 80px, 0); transform: translate(4px, -2px); }
+  20% { clip: rect(10px, 9999px, 50px, 0); transform: translate(-4px, 2px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+/* Flicker */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.6; }
+  22% { opacity: 0.3; }
+}
+/* Subtítulo */
+.hero p {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  color: var(--accent-white);
+  opacity: 0.85;
+}
+
+/* Botón CTA */
+.cta-button {
+  background: var(--button-primary-bg);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: var(--button-primary-text);
+}
+
+.cta-button:hover {
+  background: var(--button-hover-bg);
+}
+
+/* Esfera decorativa */
+.hero-sphere {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--primary-purple), var(--primary-blue), var(--primary-green));
+  opacity: 0.8;
+}

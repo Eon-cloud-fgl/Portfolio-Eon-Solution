@@ -1,6 +1,6 @@
 /* === NAVBAR BASE === */
 .nav-glass {
-  position: sticky;
+  position: fixed;
   top: 10px;
   width: 50%;
   height: 60px;

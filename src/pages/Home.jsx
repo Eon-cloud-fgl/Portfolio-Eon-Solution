@@ -1,19 +1,8 @@
 import '../styles/home.css';
 import React, { useRef, useEffect } from 'react';
 
+function Banner() {
 
-export default function Home(){
-    return (
-        <>
-            <div>
-                <Banner />
-            </div>
-        </>
-    )
-}
-
-function Banner(){
-    
     // Logica para pausar el video despues de 15 segundos
     const videoRef = useRef(null); // Creamo la referencia con un valor mutable inicial de null
     useEffect(() => {
@@ -23,20 +12,16 @@ function Banner(){
             const timer = setTimeout(() => {
                 video.pause(); // Pausamos el video despues de 3 segundos
             }, 15000) // 15000 milisegundos = 15 segundos
-        
+
             return () => clearTimeout(timer); // Limpiamos el timer al desmontar el componente
         }
     }, []); // El array vacio [] hace que este efecto se ejecute solo una vez al iniciar el componente
-    
+
 
     // Renderizamos el banner con el video con texto de bienvenida y frase
     return (
         <div className="banner">
-            <div className="title-content">
-                <h1>Te damos la bienvenida a Eon Solutions</h1>
-                <p>Inverti en soluciones, nosotros te las proponemos</p>
-            </div>
-
+            <Title />
             <div className="banner-video-container">
                 <video ref={videoRef} className='banner-video' autoPlay loop muted>
                     <source src="/animacion_inicial.mp4" type="video/mp4" />
@@ -45,4 +30,33 @@ function Banner(){
         </div>
     )
 }
+
+
+
+function Title() {
+    return (
+        <motion.div
+            className="title-content"
+            initial={{ x: -200, opacity: 0 }}   // arranca fuera de pantalla a la izquierda
+            animate={{ x: 0, opacity: 1 }}      // termina en su posición normal
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} // animación suave
+        >
+            <p className='title-welcome'>Te damos la bienvenida a </p>
+            <h1>Eon Solutions</h1>
+            <p>Invertí en soluciones, nosotros te las proponemos</p>
+            <button>Conta con Nosotros</button>
+        </motion.div>
+    );
+}
+
+
+export default function Home() {
+    return (
+        <>
+            <div className='home-container'>
+            </div>
+        </>
+    )
+}
+
 
