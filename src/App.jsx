@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import { Route, Routes} from 'react-router-dom';
 import Navbar from "./components/Navbar"
 import Home from './pages/Home.jsx'
-import './styles/global.css';
+import Copyright from './components/Copyright.jsx';
+import './styles/Global.css';
 function App() {
 
   return (
@@ -13,6 +13,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                 </Routes>
             </div>
+            <Copyright />
   </div>
   )
 }

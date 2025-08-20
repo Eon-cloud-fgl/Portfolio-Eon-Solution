@@ -1,102 +1,71 @@
-main {
-  flex: 1;
-}
-
-
-
 html,
 body {
   color: white;
 }
-
-
-/*Contenedor del banner modificado para tener mas flexibilidad de manipulacion en el banner*/
-.banner {
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-
-}
-
-/*Contenedor del video*/
 .banner-video-container {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom;
-  position: absolute;
-  transform: translateY(25%);
-  overflow: hidden;
-  position: relative;
-  left: 0;
+  width: 100%; 
+  height: 100vh; 
+  box-sizing: border-box; 
+  overflow: hidden; 
 }
-
 .banner-video {
-  width: 100%;
-  height: 100%;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+@keyframes titleAnimation1 {
+  0% {
+    left: 25%;
+    opacity: 0;
+  }
+  100% {
+    left: 45%;
+    opacity: 1;
+  }
 }
 
-
-
-
-
-
-.title-content {
-  position: absolute;
-  top: 40%;
-  width: 60%;
-  padding: 0 5rem;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: #fff;
-  z-index: 2;
+.title-content-1{
+    position: absolute;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    top: 45%;
+    left: 50%;
+    width: 200px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+    border-radius: 14px;
+    animation: titleAnimation1 6s ease-in-out forwards;
+    z-index: 1000;
 }
 
-.title-welcome {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 0;
-  position: relative;
+@keyframes titleAnimation2 {
+  0% {
+    left: 75%; 
+    opacity: 0;
+  }
+  100% {
+    left: 53%;
+    opacity: 1;
+  }
 }
 
-/* Título principal grande */
-.title-content h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  background: var(--gradient-green);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-/* Subtítulo */
-.title-content p {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 600px;
-  margin: 0;
-  line-height: 1.6;
-}
-
-.title-content button{
-  width: 350px;
-  font-size: large;
-  font-weight: bold;
-  color: var(--text-light);
-  padding: 10px;
-  border: none;
-  background: var(--dark-green);
-  border-radius: 4px;
-
+.title-content-2 {
+    position: absolute;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    top: 55%; 
+    left: 50%;
+    width: 200px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+    border-radius: 14px;
+    animation: titleAnimation2 6s ease-in-out forwards;
+    z-index: 999;
 }

@@ -1,86 +1,94 @@
-/* === NAVBAR BASE === */
-.nav-glass {
+/* ===========================
+   NAVBAR BASE
+=========================== */
+.nav-container {
   position: fixed;
-  top: 10px;
-  width: 50%;
-  height: 60px;
-  border-radius: 30px;
-  transform: translateX(-50%);
-  left: 50%;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  left: 0;
+  transform: translateY(2.5%);
+  height: 95vh;
+  width: 100px;
+  background: transparent;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(150, 150, 150, 0.08);
   transition: all 0.3s ease;
 }
 
-/* LOGO */
+.nav-glass {
+  position: fixed;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+  background: transparent;
+  z-index: 100;
+}
+
+/* ===========================
+   LOGO
+=========================== */
 .nav-logo {
   display: flex;
   align-items: center;
-  padding-left: 20px;
 }
+
 #logo {
   height: 100px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in;
+  transform: rotate(-90deg);
 }
+
 #logo:hover {
   transform: scale(1.05);
 }
 
-/* LINKS */
+/* ===========================
+   LINKS
+=========================== */
 .nav-links {
   display: flex;
-  gap: 1.8rem;
-  list-style: none;
   width: 100%;
+  gap: 1.5rem;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0;
   margin: 0;
+  flex:1;
 }
 
 .nav-links li {
   display: flex;
-  align-items: center;
-  padding: 8px 16px;
-  border-radius: 14px;
   transition: all 0.3s ease;
   position: relative;
 }
 
 .nav-links li a {
   display: flex;
-  gap: 8px;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
   text-decoration: none;
-  font-size: 1.05rem;
-  color: #222;
-  letter-spacing: 0.4px;
-  transition: color 0.3s ease;
-}
-
-/* Hover con glow */
-.nav-links li:hover {
-  background: linear-gradient(135deg, #ffffff, #eeeeee);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
-}
-
-/* Activo */
-.nav-links li.active {
-  background: transparent;
-}
-.nav-links li.active a {
   color: #ffffff;
+  transition: color 0.3s ease;
+  display: inline-block;
+  writing-mode: vertical-lr;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in;
+  rotate: 180deg;
 }
-
+.nav-line{
+  width: 1px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.30);
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+#n1:hover,#n2:hover,#n3:hover{
+  transform: scale(1.05);
+  transform: rotate(90deg);
+}
 .nav-links svg {
   width: 1.2rem;
   height: 1.2rem;
@@ -88,7 +96,16 @@
   vertical-align: middle;
 }
 
-/* === RESPONSIVE === */
+/* ===========================
+   ESTADOS (hover, active)
+=========================== */
+.nav-links li:hover {
+  text-decoration: line-through;
+}
+
+/* ===========================
+   MENU TOGGLE
+=========================== */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -97,10 +114,14 @@
   z-index: 1100;
 }
 
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 1024px) {
   .nav-glass {
     padding: 0.8rem 1.5rem;
   }
+
   #logo {
     height: 55px;
   }
@@ -116,18 +137,18 @@
     top: 80px;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(14px);
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
     padding: 1.5rem 0;
     max-height: 0;
-    overflow: hidden;
     opacity: 0;
+    overflow: hidden;
     pointer-events: none;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     transition: all 0.35s ease;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
   }
 
   .nav-links.open {
@@ -152,9 +173,11 @@
   #logo {
     height: 45px !important;
   }
+
   .nav-glass {
     padding: 0.6rem 1rem;
   }
+
   .nav-links li a {
     font-size: 1rem;
   }
