@@ -1,6 +1,7 @@
 import '../styles/Home.css';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
+import Projects from '../components/projects';
 import React, { useRef, useEffect } from 'react';
 
 function Banner() {
@@ -45,6 +46,7 @@ export default function Home() {
             <div className='home-container'>
                 <Hero />
                 <Services />
+                <Projects/>
             </div>
         </>
     )
