@@ -2,43 +2,9 @@ import '../styles/Home.css';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Projects from '../components/projects';
+import Languages from '../components/languages';
+import About from '../components/About';
 import React, { useRef, useEffect } from 'react';
-
-function Banner() {
-
-    // Logica para pausar el video despues de 15 segundos
-    const videoRef = useRef(null); // Creamo la referencia con un valor mutable inicial de null
-    useEffect(() => {
-        const video = videoRef.current; // Creamos una constante que va a contener la referencia al video
-        // Si el video existe, configuramos un timer para pausarlo
-        if (video) {
-            const timer = setTimeout(() => {
-                video.pause(); // Pausamos el video despues de 3 segundos
-            }, 10000) // 15000 milisegundos = 15 segundos
-        
-            return () => clearTimeout(timer); // Limpiamos el timer al desmontar el componente
-        }
-    }, []); // El array vacio [] hace que este efecto se ejecute solo una vez al iniciar el componente
-
-
-    // Renderizamos el banner con el video con texto de bienvenida y frase
-    return (
-        <div className="banner">
-            <div className="title-content-1">
-                <h1>Eon</h1>
-            </div>
-            <div className="title-content-2">
-                <h1>Solutions</h1>
-            </div>
-            <div className="banner-video-container">
-                <video ref={videoRef} className='banner-video' autoPlay loop muted>
-                    <source src="/animacion_inicial.mp4" type="video/mp4" />
-                </video>
-            </div>
-        </div>
-    )
-}
-
 
 export default function Home() {
     return (

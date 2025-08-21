@@ -18,34 +18,32 @@ export default function Projects() {
 ];
 
     return (
-        <>
-            <section className="projects">
-            <h2 className="projects-title">Nuestros Proyectos</h2>
+        <> 
+        <section className="projects">
+            <div className="projects-inner">
+            <h2 className="projects-title neon">Nuestros Proyectos</h2>
 
             <div className="projects-grid">
+            <article className="project-card">
+                <div className="project-image project-otter" />
+                    <div className="project-body">
+                    <h3>Otter Task</h3>
+                    <p>Sistema Web para gestionar stock hecha con React y PHP.</p>
+                    <a className="btn-ghost" href="#">Ver más</a>
+                </div>
+            </article>
 
-                
-                <div className="project-card">
-                    <div className="project-image"> 
-                        
+            <article className="project-card">
+                <div className="project-image project-realestate" />
+                    <div className="project-body">
+                        <h3>Sitio Web “Inmobiliaria Mottoso”</h3>
+                        <p>Sitio web con panel de control, hecho con React y PHP.</p>
+                        <a className="btn-ghost" href="#">Ver más</a>
                     </div>
-
-                        <h3>Otter Task</h3>
-                        <p>Sistema Web para gestionar stock hecha con React y PHP.</p>
-                        <a href="#">Ver más</a>
-                    </div>
-
-                    
-                <div className="project-card">
-                    <div className="project-image">
-                        
-                    </div>
-                        <h3>Sitio Web "Inmobiliaria Mottoso"</h3>
-                        <p>Sitio web con panel de control para una inmobiliaria, hecho con React y PHP.</p>
-                        <a href="#">Ver más</a>
-                    </div>
+            </article>
+                </div>
             </div>
-    </section>
+        </section>
         </>
     );
 }
