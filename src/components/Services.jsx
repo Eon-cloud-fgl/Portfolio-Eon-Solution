@@ -7,7 +7,10 @@ export default function Services() {
         <section className="services-container">
             {/* Introducción / título de la sección */}
             <article className="services-intro">
-                <h1>Transformamos tu negocio con soluciones digitales</h1>
+                <div className="title-container">
+                    <h1>Transformamos tu negocio </h1>
+                    <span className="services-firm">-OtterSolution</span>
+                </div>
                 <p>
                     En EON Solutions nos enfocamos en potenciar cada aspecto de tu empresa mediante
                     estrategias personalizadas y tecnología de vanguardia. Desde el desarrollo web hasta
@@ -36,19 +39,21 @@ export default function Services() {
                     description="Asesoramos tu negocio en la implementación de tecnología eficiente."
                     Icon={FaLightbulb}
                 />
+                <div className="services-line"></div>
+                <span className="services-text">Nuestros Servicios</span>
             </article>
         </section>
     );
 }
 
 function Item({ title, description, Icon, className }) {
-  return (
-    <div className={`service-item ${className ? className : ''}`}>
-      <div className="service-icon"><Icon /></div>
-      <h2>{title}
-        {className === 'glitch-item' && <span className="glitch-effect">{title}</span>}
-      </h2>
-      <p>{description}</p>
-    </div>
-  );
+    return (
+        <div className={`service-item ${className ? className : ''}`}>
+            <div className="service-icon"><Icon /></div>
+            <h2>{title}
+                {className === 'glitch-item' && <span className="glitch-effect">{title}</span>}
+            </h2>
+            <p>{description}</p>
+        </div>
+    );
 }
