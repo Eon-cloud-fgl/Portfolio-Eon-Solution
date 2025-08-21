@@ -2,7 +2,26 @@
 .hero {
     width: 100vw;
     height: 100vh;
-    background-image: url("/public/hero-wp.png");
+    background: radial-gradient(circle at 70% center,
+            #3a2466 0%,
+            /* morado oscuro más bajo */
+            #332060 10%,
+            /* empieza a apagar */
+            #27184d 20%,
+            /* tono violeta apagado */
+            #1b1136 30%,
+            /* casi negro azulado */
+            #120c24 40%,
+            /* muy oscuro */
+            #0a0715 50%,
+            /* borde oscuro fuerte */
+            #05030c 60%,
+            /* casi negro */
+            #020105 70%,
+            /* negro absoluto */
+            #0f0f0f 100%
+            /* fondo negro */
+        );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -33,9 +52,10 @@
     color: var(--text-light);
     margin: 0;
     text-transform: uppercase;
-    text-shadow: 0 0 5px var(--primary-blue),
-        0 0 10px var(--primary-green),
-        0 0 15px var(--primary-purple);
+    text-shadow:
+        0 0 5px var(--secondary),
+        0 0 10px var(--tertiary),
+        0 0 15px var(--primary);
     animation: flicker 3s infinite;
 }
 
@@ -53,26 +73,23 @@
     opacity: 0.8;
 }
 
-/* Verde desplazado */
+/* Capa desplazada 1 */
 .glitch::before {
     left: 2px;
-    text-shadow: -2px 0 var(--primary-green);
+    text-shadow: -2px 0 var(--secondary);
     animation: glitchTop 2.5s infinite linear alternate-reverse;
-    color: var(--primary-green);
+    color: var(--secondary);
 }
 
-/* Azul + violeta desplazados */
+/* Capa desplazada 2 con degradado */
 .glitch::after {
     left: -2px;
-    text-shadow: -2px 0 var(--primary-blue), 2px 2px var(--primary-purple);
+    text-shadow: -2px 0 var(--primary), 2px 2px var(--secondary);
     animation: glitchBottom 2s infinite linear alternate-reverse;
-    background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-
 
 /* Animación glitch superior */
 @keyframes glitchTop {
@@ -189,57 +206,39 @@
 }
 
 .hero-sphere {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--primary-purple), var(--primary-blue), var(--primary-green));
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3); /* leve resplandor */
-  animation: glow 6s ease-in-out infinite alternate;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,
+            #7e4ef8 0%,
+            /* violeta brillante arriba */
+            #5a36b0 40%,
+            /* más oscuro en el medio */
+            #3a2466 70%,
+            /* violeta profundo */
+            #24163b 100%
+            /* casi púrpura oscuro */
+        );
+    position: relative;
+    z-index: 1;
 }
 
-/* Efecto de brillo pulsante */
-@keyframes glow {
-  from {
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-  }
-  to {
-    box-shadow: 0 0 70px rgba(255, 255, 255, 0.6);
-  }
-}
-
-/* Anillo detrás */
 .hero-sphere::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 520px;
-  height: 280px;
-border: 10px solid rgba(200, 255, 255, 0.5);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotateX(70deg) rotateZ(15deg);
-  clip-path: inset(50% 0 0 0);
-  z-index: 0;
-  animation: rotateRing 40s linear infinite;
-  filter: blur(1px); /* suaviza el anillo */
+    content: "";
+    position: absolute;
+    top: 50%;
+    /* centra vertical */
+    left: 50%;
+    /* centra horizontal */
+    transform: translate(-50%, -50%);
+    /* corrección al centro */
+    width: 1250px;
+    /* más grande que la esfera */
+    height: 1250px;
+    background-image: url("/public/otter-marmol.png");
+    background-size: contain;
+    /* o cover */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
 }
-
-/* Anillo delante */
-.hero-sphere::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 520px;
-  height: 280px;
-  border: 10px solid rgba(200, 255, 255, 0.5);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotateX(70deg) rotateZ(15deg);
-  clip-path: inset(0 0 50% 0); /* solo la mitad frontal */
-  z-index: 2;
-  animation: rotateRing 40s linear infinite;
-  filter: blur(1px);
-}
-

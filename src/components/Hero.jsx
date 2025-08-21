@@ -12,9 +12,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="glitch"
-          data-text="EON SOLUTIONS"
+          data-text="OTHER"
         >
-          EON SOLUTIONS
+          OTTER SOLUTIONS
         </motion.h1>
 
         <motion.p
@@ -38,8 +38,9 @@ export default function Hero() {
       {/* Esfera decorativa */}
       <motion.div
         className="hero-sphere"
-        animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 6, repeat: Infinity }}
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
       />
     </section>
   );
