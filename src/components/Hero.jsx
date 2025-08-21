@@ -26,7 +26,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="hero-pretitle"
         >
-          Somos
+          Hola, Somos
         </motion.h2>
 
         <motion.h1

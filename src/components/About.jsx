@@ -59,7 +59,7 @@ function OtterAbout() {
                 <span>Limites</span>
             </h3>
 
-            <img src="/logo_blanco.png" alt="" />
+            <img src="/otter-marmol-head.png" alt="" />
         </div>
     );
 }
