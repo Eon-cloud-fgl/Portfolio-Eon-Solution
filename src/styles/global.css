@@ -1,7 +1,10 @@
 :root {
   --primary: #7e4ef8;
-  --secondary: #a282f5;
-  --tertiary: #c2a9fa;
+  /* violeta base */
+  --secondary: #b46cf9;
+  /* violeta-rosado más intenso, inspirado en la imagen */
+  --tertiary: #d69cfb;
+  /* rosa suave */
   --accent: #e0d4ff;
 
   --background-light: #F5F5F5;
@@ -14,11 +17,13 @@
 
   --accent-white: #FFFFFF;
   --accent-yellow: #FFF176;
-  --accent-pink: #FF6FD8;
+  --accent-pink: #d69cfb;
 
-  --gradient-primary: linear-gradient(180deg, #a282f5 0%, #7e4ef8 100%);
-  --gradient-secondary: linear-gradient(180deg, #c2a9fa 0%, #a282f5 100%);
-  --gradient-mixed: linear-gradient(135deg, #7e4ef8 0%, #a282f5 50%, #c2a9fa 100%);
+  /* Gradientes suavizados y con más contraste */
+  --gradient-primary: linear-gradient(180deg, #d69cfb 0%, #b46cf9 50%, #7e4ef8 100%);
+  --gradient-secondary: linear-gradient(180deg, #f8c3ff 0%, #e9a7ff 40%, #d890ff 70%, #c578ff 100%);
+  --gradient-mixed: linear-gradient(135deg, #7e4ef8 0%, #b46cf9 50%, #d69cfb 100%);
+  --gradient-dark: linear-gradient(180deg, #141516 0%, #1c1d20 100%);
 
   --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -27,6 +32,7 @@
   --button-primary-text: var(--accent-white);
   --button-hover-bg: var(--secondary);
 }
+
 
 * {
   box-sizing: border-box;
