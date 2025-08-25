@@ -3,7 +3,8 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Languages from '../components/languages';
 import About from '../components/About';
-import React, { useRef, useEffect } from 'react';
+import Footer from '../components/Footer';
+import News from '../components/News';
 
 export default function Home() {
     return (
@@ -13,6 +14,8 @@ export default function Home() {
                 <Services />
                 <Languages />
                 <About />
+                <News />
+                <Footer />
             </div>
         </>
     )

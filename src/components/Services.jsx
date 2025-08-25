@@ -11,7 +11,8 @@ export default function Services() {
                     <h1>Transformamos tu negocio </h1>
                     <span className="services-firm">-OtterSolution</span>
                 </div>
-                <p>
+            <img className="svg-icon-2" src="../../public/circle-svgrepo-com.svg" alt="" />
+                <p className="services-description">
                     En EON Solutions nos enfocamos en potenciar cada aspecto de tu empresa mediante
                     estrategias personalizadas y tecnología de vanguardia. Desde el desarrollo web hasta
                     el marketing digital y la consultoría tecnológica, nuestro objetivo es crear experiencias
@@ -20,7 +21,7 @@ export default function Services() {
                     tangibles, asegurando que cada proyecto genere valor real y crecimiento sostenido.
                 </p>
             </article>
-
+            <img className="svg-icon" src="../../public/turn-right-arrow-with-broken-line-svgrepo-com.svg" alt="" />
             {/* Lista de items */}
             <article className="services-items">
                 <Item
