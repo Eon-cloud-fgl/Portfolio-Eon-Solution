@@ -1,0 +1,205 @@
+.footer{
+    background: var(--background-dark);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+}
+.footer-left{
+    width: 70%;
+    
+}
+.footer-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-top{
+    padding: 30px;
+}
+#title-footer {
+    font-family: "Bruno Ace SC", sans-serif;
+    font-size: 70px;
+    font-weight: bolder;
+    color: #ffff;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+.footer-bottom {
+    border-top: 1px solid #ffff;
+    width: 100%;
+}
+.footer-bottom ul li {
+    list-style: none;
+}
+#footer-links {
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 88%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.footer-button,
+.footer-button::after {
+ padding: 16px 20px;
+ font-size: 18px;
+ background: linear-gradient(45deg, transparent 5%, white 5%);
+ border: 0;
+ color: black;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px gray;
+ outline: transparent;
+ position: relative;
+}
+
+.footer-button::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #ffffff 5%);
+ text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #ffffff;
+ clip-path: var(--slice-0);
+}
+
+.footer-button:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}
+#title-top {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #ffff;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+.footer-copyright {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+}
+#otter-icon {
+    font-size: 20px;
+    color: white;
+    margin-left: 8px;
+    position: relative;
+    top: 4px;
+}
