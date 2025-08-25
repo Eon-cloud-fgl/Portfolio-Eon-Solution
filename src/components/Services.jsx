@@ -42,6 +42,12 @@ export default function Services() {
                 <div className="services-line"></div>
                 <span className="services-text">Nuestros Servicios</span>
             </article>
+
+
+            <div className="service-sphere s1"></div>
+            <div className="service-sphere s2"></div>
+            <div className="service-sphere s3"></div>
+
         </section>
     );
 }

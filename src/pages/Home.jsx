@@ -12,7 +12,6 @@ export default function Home() {
                 <Hero />
                 <Services />
                 <Languages />
-
                 <About />
             </div>
         </>

@@ -1,4 +1,5 @@
 .services-container {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background: var(--gradient-dark);
@@ -19,6 +20,7 @@
   gap: 5rem;
   max-width: 1200px;
   height: 100vh;
+  z-index: 3;
 }
 
 .title-container {
@@ -73,7 +75,7 @@
   width: 20%;
   max-width: 1200px;
   padding: 3rem 0;
-  z-index: 0;
+  z-index: 3;
 }
 
 .services-text {
@@ -309,4 +311,39 @@
   60% {
     transform: translate(0, 0);
   }
+}
+
+.service-sphere {
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #7e4ef8 0%, #5a36b0 40%, #3a2466 70%, #24163b 100%);
+  position: relative;
+  z-index: 1;
+}
+
+
+.s1 {
+  position: absolute;
+  width: clamp(150px, 20vw, 400px);
+  height: clamp(150px, 20vw, 400px);
+  filter: blur(15px) brightness(0.8);
+  bottom: 10%;
+  left: 5%;
+}
+
+.s2 {
+  position: absolute;
+  width: clamp(30px, 15vw, 300px);
+  height: clamp(30px, 15vw, 300px);
+  filter: blur(15px) brightness(0.8);
+  top: 15%;
+  right: 5%;
+}
+
+.s3 {
+  position: absolute;
+  width: clamp(80px, 10vw, 200px);
+  height: clamp(80px, 10vw, 200px);
+  filter: blur(15px) brightness(0.8);
+  bottom: 20%;
+  right: 20%;
 }
