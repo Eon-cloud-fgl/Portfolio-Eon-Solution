@@ -4,7 +4,7 @@ export default function Copyright() {
     return (
         <footer className="copyright-container">
             <div className="copyright-content">
-                <p>©/2025</p>
+                <p>&copy;/{new Date().getFullYear()}</p>
             </div>
         </footer>
     );

@@ -62,7 +62,6 @@
   max-width: 800px;
   margin: 0;
 }
-
 /* Lista de items */
 .services-items {
   position: relative;
@@ -80,11 +79,26 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-100%, -50%) rotate(-35deg);
+  transform: translate(-100%, -200%) rotate(-35deg);
   opacity: 0.6;
   color: var(--text-info);
 }
-
+.svg-icon{
+  width: 150px;
+  transform: translate(-5%, -30%) rotate(35deg);
+}
+.svg-icon-2{
+  position: absolute;
+  transform: translate(-60%, 0%) rotate(35deg);
+  width: 900px;
+  height: 900px;
+  z-index: 1;  /* SVG queda detrás */
+  opacity: 0.8; /* semi transparente */
+}
+.services-description {
+  position: relative;
+  z-index: 1;
+}
 /* El primero, tercero, quinto... a la izquierda */
 .services-items>*:nth-child(odd) {
   align-self: flex-start;
