@@ -1,4 +1,4 @@
-import '../styles/Home.css';
+import '../styles/home.css';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Languages from '../components/languages';
