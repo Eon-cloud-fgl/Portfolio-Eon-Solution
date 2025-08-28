@@ -5,6 +5,7 @@ import Languages from '../components/Languages';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import News from '../components/News';
+import Team from '../components/Team';
 
 export default function Home() {
     return (
@@ -13,7 +14,6 @@ export default function Home() {
                 <Hero />
                 <Services />
                 <Languages />
-
                 <About />
                 <News />
                 <Footer />
