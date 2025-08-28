@@ -1,7 +1,7 @@
 import '../styles/home.css';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
-import Languages from '../components/languages';
+import Languages from '../components/Languages';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import News from '../components/News';
