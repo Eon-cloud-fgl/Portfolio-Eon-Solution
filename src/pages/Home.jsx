@@ -5,6 +5,7 @@ import Languages from '../components/languages';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import News from '../components/News';
+import Projects from '../components/Projects';
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
                 <Languages />
 
                 <About />
+                <Projects />
                 <News />
                 <Footer />
             </div>
