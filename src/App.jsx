@@ -5,7 +5,7 @@ import Home from './pages/Home.jsx'
 import Copyright from './components/Copyright.jsx';
 import TVNoise from "./components/NoiseBackground.jsx";
 import Loader from './components/Loader.jsx';
-import './styles/Global.css';
+import './styles/global.css';
 
 
 function App() {
