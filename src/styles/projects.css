@@ -2,35 +2,116 @@
   padding: 4rem 2rem;
   background: var(--background-dark);
   color: var(--accent-white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-btn {
+  border: 2px solid var(--primary);
+  background: transparent;
+  width: fit-content;
+  color: white;
+  margin-top: 3rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.project-btn:hover {
+  background: var(--primary);
+}
+
+
+.projects-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.pt-title {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+  font-size: 1.1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.pt-title h2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  mix-blend-mode: difference;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .projects-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: var(--secondary); 
-  text-shadow: 0 0 10px var(--secondary), 0 0 20px var(--primary);
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 70px;
+  font-weight: bolder;
+  color: #ffff;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+  max-width: 580px;
 }
 
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  position: relative;
+  gap: 0;
+  width: 100%;
 }
 
 .project-card {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  align-items: center;
   position: relative;
   padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  transition: background 0.2s;
   cursor: pointer;
-  max-width: 600px;
+  min-height: 70px;
 }
+
+.project-card:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+  border-bottom: none;
+}
+
 
 .project-card h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+
+.project-card h3,
+.project-card p,
+.project-card a {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 
 .project-card p {
   font-size: 1rem;
@@ -52,8 +133,8 @@
 /* Imagen preview */
 .project-preview {
   position: absolute;
-  top: 0;            
-  left: 60%;      
+  top: 55px;
+  left: 60%;
   z-index: 20;
   pointer-events: none;
 }
@@ -61,11 +142,54 @@
 .project-preview img {
   width: 420px;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 4px;
   box-shadow: 0 0 40px var(--shadow-light);
   animation: fadeIn 0.3s ease;
-  transform: rotate(-2deg); 
+  transform: rotate(-2deg);
+  opacity: 0.95;
+  mix-blend-mode: difference;
 }
+
+.project-marquee-container {
+  grid-column: 1 / -1;
+  width: 100%;
+  overflow: hidden;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.project-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 8s linear infinite;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(126, 78, 248, 0.10);
+}
+
+.project-marquee span {
+  display: inline-block;
+  padding-right: 2.75rem;
+  text-transform: uppercase;
+}
+
+/* Animación marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
 
 /* Animación suave */
 @keyframes fadeIn {
@@ -73,8 +197,24 @@
     opacity: 0;
     transform: translateY(10px) rotate(-2deg);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) rotate(-2deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-table, .projects-grid {
+    max-width: 100%;
+  }
+  .pt-title, .project-card {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .project-preview img {
+    width: 90vw;
+    max-width: 90vw;
   }
 }
