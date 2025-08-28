@@ -17,7 +17,7 @@ export default function News() {
     },
     {
       id: 2,
-      img: '/logo_blanco.png',
+      img: '/portfolio.png',
       title: 'Portfolio finalizado',
       text: 'Presentamos nuestro portfolio, una muestra de nuestros mejores trabajos y proyectos.'
     }
