@@ -14,7 +14,7 @@ const TVNoise = () => {
       const imageData = ctx.createImageData(width, height);
       const buffer = new Uint32Array(imageData.data.buffer);
       for (let i = 0; i < buffer.length; i++) {
-        const value = Math.random() < 0.4 ? 0xff000000 : 0xffffffff;
+        const value = Math.random() < 0.5 ? 0xff000000 : 0xffffffff;
         buffer[i] = value;
       }
       ctx.putImageData(imageData, 0, 0);
