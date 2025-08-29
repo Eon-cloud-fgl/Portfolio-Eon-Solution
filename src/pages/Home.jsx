@@ -17,7 +17,7 @@ export default function Home() {
                 <Languages />
                 <About />
                 <Projects />
-                {/* <Team /> */}
+                <Team />
                 <News />
                 <Footer />
             </div>
