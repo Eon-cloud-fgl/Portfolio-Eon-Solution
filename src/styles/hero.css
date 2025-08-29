@@ -266,50 +266,70 @@
     50% { transform: translateY(5px) rotate(-45deg); }
 }
 
-/* --- Media Queries --- */
+/* --- Hero Section Responsive --- */
 
+/* Desktop grande (1920px hacia abajo) */
 @media (max-width: 1920px) {
-    .glitch { font-size: 3.5rem; }
-    .hero-sphere { width: 700px; height: 700px; }
-    .hero-sphere::before { width: 1100px; height: 1100px; }
+  .glitch { font-size: 3.5rem; }
+  .hero-sphere { width: 700px; height: 700px; }
+  .hero-sphere::before { width: 1100px; height: 1100px; }
 }
 
-/* Hasta 1600px */
+/* Laptops grandes (1600px hacia abajo) */
 @media (max-width: 1600px) {
-    .glitch { font-size: 3rem; }
-    .hero-sphere { width: 600px; height: 600px; }
-    .hero-sphere::before { width: 950px; height: 950px; }
-    .hero-content { max-width: 600px; }
+  .glitch { font-size: 3rem; }
+  .hero-sphere { width: 600px; height: 600px; }
+  .hero-sphere::before { width: 950px; height: 950px; }
+  .hero-content { max-width: 600px; }
 }
 
-/* Hasta 1200px */
-@media (max-width: 1200px) {
-    .glitch { font-size: 2.5rem; }
-    .hero-sphere { width: 500px; height: 500px; }
-    .hero-sphere::before { width: 800px; height: 800px; }
-    .hero-content { max-width: 500px; }
-    .hero p { font-size: 1rem; }
-    .hero-pretitle { font-size: 1rem; }
+/* Laptops medianas (1200px hacia abajo) */
+@media (max-width: 1500px) {
+  .glitch { font-size: 2.5rem; }
+  .hero-sphere { width: 500px; height: 500px; }
+  .hero-sphere::before { width: 800px; height: 800px; }
+  .hero-content { max-width: 500px; }
+  .hero p { font-size: 1rem; }
+  .hero-pretitle { font-size: 1rem; }
+  .hero {padding: 0rem 0rem 0rem 6rem;}
 }
 
-/* Hasta 992px */
+/* Tablets horizontales (992px hacia abajo) */
 @media (max-width: 992px) {
-    .hero { flex-direction: column; justify-content: center; padding: 2rem; }
-    .glitch { font-size: 2rem; text-align: center; }
-    .hero-sphere { width: 400px; height: 400px; margin-top: 2rem; }
-    .hero-sphere::before { width: 650px; height: 650px; }
-    .hero-content { max-width: 90%; text-align: center; }
-    .hero p { font-size: 0.95rem; }
-    .hero-pretitle { font-size: 0.95rem; }
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .glitch { font-size: 2rem; }
+  .hero-content { max-width: 90%; }
+  .hero-sphere { width: 380px; height: 380px; margin-top: 2rem; }
+  .hero-sphere::before { width: 600px; height: 600px; }
+  .hero p { font-size: 0.95rem; }
+  .hero-pretitle { font-size: 0.95rem; }
+  .mouse, .line{
+    display: none;
+  }
 }
 
-/* Hasta 768px */
+/* Tablets verticales y móviles grandes (768px hacia abajo) */
 @media (max-width: 768px) {
-    .glitch { font-size: 1.5rem; }
-    .hero-sphere { width: 300px; height: 300px; margin-top: 1.5rem; }
-    .hero-sphere::before { width: 500px; height: 500px; }
-    .hero p { font-size: 0.85rem; }
-    .hero-pretitle { font-size: 0.85rem; }
-    .cta-button { width: 40px; height: 40px; font-size: 1rem; }
-    .cta-button::after { width: 40px; height: 40px; }
+  .glitch { font-size: 1.75rem; }
+  .hero-sphere { width: 300px; height: 300px; margin-top: 1.5rem; }
+  .hero-sphere::before { width: 480px; height: 480px; }
+  .hero p { font-size: 0.85rem; }
+  .hero-pretitle { font-size: 0.85rem; }
+  .cta-button { width: 40px; height: 40px; font-size: 1rem; }
+  .cta-button::after { width: 40px; height: 40px; }
+}
+
+/* Celulares chicos (480px hacia abajo) */
+@media (max-width: 480px) {
+  .glitch { font-size: 1.3rem; }
+  .hero p { font-size: 0.8rem; }
+  .hero-pretitle { font-size: 0.8rem; }
+  .hero-sphere { width: 220px; height: 220px; }
+  .hero-sphere::before { width: 350px; height: 350px; }
+  .cta-button { width: 36px; height: 36px; font-size: 0.9rem; }
+  .cta-button::after { width: 36px; height: 36px; }
 }
