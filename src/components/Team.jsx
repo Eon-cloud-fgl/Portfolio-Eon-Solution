@@ -23,7 +23,7 @@ export default function Team() {
                 <TeamMember
                     name="Ferch0"
                     role="Jefe de Desarrollo/Desarrollador Full Stack"
-                    image="/public/logo_boss.png"
+                    image="/logo_boss.png"
                     delay={0}
                     link="https://fern-portfolio.netlify.app/"
                 />
@@ -32,14 +32,14 @@ export default function Team() {
                 <TeamMember
                     name="Prominence"
                     role="Desarrollador Full Stack/Diseñador UX/UI"
-                    image="/public/logo_ux_ui.png"
+                    image="/logo_ux_ui.png"
                     delay={0.2}
                 />
 
                 <TeamMember
                     name="Gaba"
                     role="Desarrollador Frontend"
-                    image="/public/logo_developer.png"
+                    image="/logo_developer.png"
                     delay={0.4}
                 />
             </div>
