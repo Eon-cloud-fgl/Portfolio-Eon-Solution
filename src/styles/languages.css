@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-evenly;
   overflow: hidden;
-  width: 100%;
   padding: 5rem 0;
   background-color: var(--background-dark);
   background-image: url("/languages-wp.jpg");
@@ -33,10 +32,13 @@
 }
 
 .languages-track {
-  display: flex;
-  gap: 10rem;
-  width: max-content;
-  animation: scroll 20s linear infinite;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(2, auto);  
+  gap: 4rem 6rem; 
+  width: 100%;
+  justify-items: center;
+  animation: none; 
 }
 
 .language-item {
@@ -44,7 +46,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 80px;
   color: white;
   text-align: center;
 }
@@ -59,4 +60,39 @@
   font-weight: 300;
   letter-spacing: 0.075rem;
   font-size: 1rem;
+}
+
+
+@media (max-width: 1199px) {
+  .languages-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 100%;
+    animation: none; 
+    justify-items: center;
+  }
+
+  .language-item {
+    min-width: unset; 
+  }
+}
+
+@media (max-width: 480px) {
+  .languages-track {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    animation: none;
+    align-items: center;
+  }
+
+  .language-item .icon {
+    font-size: 2.5rem;
+  }
+
+  .language-item span {
+    font-size: 0.9rem;
+  }
 }

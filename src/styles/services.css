@@ -10,6 +10,7 @@
   gap: 5rem;
   color: var(--text-light);
   font-family: 'Inter', sans-serif;
+  padding: 0rem 4rem 0rem 4rem;
 }
 
 /* Introducción */
@@ -30,8 +31,8 @@
 
 .services-firm {
   position: absolute;
-  right: 23%;
-  top: 70%;
+  right: 15%;
+  top: 75%;
   font-family: 'Alumni Sans Pinstripe', sans-serif;
   font-style: italic;
   text-transform: uppercase;
@@ -360,4 +361,164 @@
   filter: blur(15px) brightness(0.8);
   bottom: 20%;
   right: 20%;
+}
+/* ================= */
+/*  Responsive CSS   */
+/* ================= */
+@media (max-width: 1550px) {
+  .services-firm {
+    right: 8%;
+    top: 75%;
+  }
+}
+
+/* Laptops & tablets grandes (<=1200px) */
+@media (max-width: 1200px) {
+  .services-container {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem 2rem;
+    align-items: center;
+  }
+
+  .services-firm {
+        top: 68%;
+        right: 5%;
+  }
+
+  .services-intro {
+    max-width: 90%;
+    height: auto;
+    gap: 3rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .services-intro h1 {
+    font-size: 3.5rem;
+  }
+
+  .services-intro p {
+    font-size: 1.3rem;
+    text-indent: 0;
+    max-width: 90%;
+  }
+
+  .services-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .service-item {
+    width: 260px;
+  }
+
+  .services-line,
+  .services-text,
+  .svg-icon {
+    display: none;
+  }
+}
+
+/* Tablets medianas (<=992px) */
+@media (max-width: 992px) {
+  .services-intro h1 {
+    font-size: 3rem;
+  }
+
+  .services-intro p {
+    font-size: 1.2rem;
+  }
+
+  .services-items {
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    width: 220px;
+  }
+}
+
+/* Tablets pequeñas (<=768px) */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 3rem 1.5rem;
+    gap: 3rem;
+  }
+
+  .services-intro h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .services-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .services-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .service-item {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .svg-icon,
+  .svg-icon-2 {
+    display: none;
+  }
+}
+
+/* Celulares (<=480px) */
+@media (max-width: 480px) {
+  .services-container {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .services-intro {
+    gap: 1.5rem;
+  }
+
+  .services-intro h1 {
+    font-size: 2rem;
+  }
+
+  .services-intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .service-item {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .service-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-item p {
+    font-size: 0.9rem;
+  }
+
+  .services-firm {
+    top: 80%;
+    right: 20%;
+  }
 }

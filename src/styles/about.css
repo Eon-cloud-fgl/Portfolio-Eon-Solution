@@ -148,3 +148,122 @@
 .otter-about-container img {
     transform: translate(-40%, 40%) scaleX(-1);
 }
+.about-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--primary);
+    min-height: 76vh;
+    padding: 2rem;
+    gap: 3rem;
+    overflow: hidden;
+}
+
+.about-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/about-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.about-container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ----------- RESPONSIVE ----------- */
+
+/* Tablets y laptops */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 3rem 2rem;
+    }
+
+    .about-info {
+        max-width: 700px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-info h1 {
+        font-size: 2rem;
+    }
+
+    .reasons-list {
+        align-items: center;
+    }
+
+    .reasons-list li {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .otter-about-container {
+        min-width: auto;
+        width: 100%;
+        max-width: 350px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .otter-about-container h3 {
+        text-align: center;
+        align-items: center;
+    }
+
+    .otter-about-container img {
+        position: relative;
+        width: 140px;
+        height: 150px;
+        transform: scaleX(-1) translateY(20%);
+        bottom: auto;
+        left: auto;
+    }
+}
+
+/* Moviles */
+@media (max-width: 600px) {
+    .about-container {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .about-info h1 {
+        font-size: 1.6rem;
+    }
+
+    .reasons-list li {
+        font-size: 0.95rem;
+        gap: 1rem;
+    }
+
+    .otter-about-container {
+        padding: 1rem;
+        max-width: 280px;
+        min-height: auto;
+    }
+
+    .otter-about-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .otter-about-container img {
+        width: 110px;
+        height: 120px;
+        transform: scaleX(-1) translateY(10%);
+    }
+}
