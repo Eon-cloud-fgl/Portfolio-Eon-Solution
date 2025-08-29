@@ -1,62 +1,62 @@
 .languages-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-    padding: 5rem 0;
-    background-color: var(--background-dark);
-    background-image: url("/languages-wp.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  width: 100%;
+  padding: 5rem 0;
+  background-color: var(--background-dark);
+  background-image: url("/languages-wp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Overlay para oscurecer */
 .languages-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* ajuste la opacidad para más o menos oscuridad */
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
 /* Contenido encima del fondo */
-.languages-container>* {
-    position: relative;
-    z-index: 1;
+.languages-container > * {
+  position: relative;
+  z-index: 1;
 }
 
-
 .languages-track {
-    display: flex;
-    gap: 10rem;
-    width: max-content;
-    animation: scroll 20s linear infinite;
+  display: flex;
+  gap: 10rem;
+  width: max-content;
+  animation: scroll 20s linear infinite;
 }
 
 .language-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 100px;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  color: white;
+  text-align: center;
 }
 
 .language-item .icon {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .language-item span {
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.075rem;
+  font-size: 1rem;
 }

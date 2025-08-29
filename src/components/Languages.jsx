@@ -7,6 +7,7 @@ import {
   SiTypescript,
   SiNextdotjs,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 import "../styles/languages.css";
 
 export default function Languages() {
@@ -20,19 +21,27 @@ export default function Languages() {
     { name: "Next.js", icon: <SiNextdotjs /> },
   ];
 
-  // duplicamos para loop infinito
-  const repeated = [...languages];
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
   return (
     <div className="languages-container">
-      <div className="languages-track">
-        {repeated.map((lang, index) => (
-          <div className="language-item" key={index}>
-            <div className="icon">{lang.icon}</div>
-            <span>{lang.name}</span>
-          </div>
-        ))}
-      </div>
+      {languages.map((lang, index) => (
+        <motion.div
+          className="language-item"
+          key={index}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"      // dispara al entrar en pantalla
+          viewport={{ once: true }}  // solo se anima la primera vez
+          transition={{ delay: index * 0.15 }} // pequeña ola
+        >
+          <div className="icon">{lang.icon}</div>
+          <span>{lang.name}</span>
+        </motion.div>
+      ))}
     </div>
   );
 }

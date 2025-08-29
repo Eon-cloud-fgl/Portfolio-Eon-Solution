@@ -5,6 +5,7 @@ import Languages from '../components/Languages';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import News from '../components/News';
+import Projects from '../components/Projects';
 import Team from '../components/Team';
 
 export default function Home() {
@@ -15,6 +16,8 @@ export default function Home() {
                 <Services />
                 <Languages />
                 <About />
+                <Projects />
+                <Team />
                 <News />
                 <Footer />
             </div>
