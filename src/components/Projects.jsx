@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import "../styles/projects.css";
 
 const projects = [
-  { id: 1, title: "Propiedades Mottoso", description: "React, MySQL, PHP.", image: "/public/mottosopagina.PNG", link: "#" },
-  { id: 2, title: "Otter Task", description: "PHP y MySQL.", image: "/public/otter.png", link: "#" },
-  { id: 3, title: "Beretta System", description: "React, PHP, MySQL.", image: "/public/beretta.png", link: "#" },
+  { id: 1, title: "Propiedades Mottoso", description: "React, MySQL, PHP.", image: "/mottosopagina.png", link: "#" },
+  { id: 2, title: "Otter Task", description: "PHP y MySQL.", image: "/otter.png", link: "#" },
+  { id: 3, title: "Beretta System", description: "React, PHP, MySQL.", image: "/beretta.png", link: "#" },
 ];
 
 const containerVariants = {
