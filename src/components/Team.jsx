@@ -41,6 +41,7 @@ export default function Team() {
                     role="Desarrollador Frontend"
                     image="/logo_developer.png"
                     delay={0.4}
+                    link="https://diego-portfolio.netlify.app/"
                 />
             </div>
         </section>
