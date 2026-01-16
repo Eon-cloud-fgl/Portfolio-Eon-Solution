@@ -25,7 +25,7 @@ export default function Team() {
                     role="Jefe de Desarrollo/Desarrollador Full Stack"
                     image="/logo_boss.png"
                     delay={0}
-                    link="https://fern-portfolio.netlify.app/"
+                    link="https://fern-portfolio-v2.netlify.app/"
                 />
 
 
