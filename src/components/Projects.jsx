@@ -1,5 +1,6 @@
 import { useState, useMemo, useCallback, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import '../styles/projects.css';
 
 // Base de datos JSON con más detalles
 const projects = [
