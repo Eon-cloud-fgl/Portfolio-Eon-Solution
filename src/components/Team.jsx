@@ -37,7 +37,7 @@ export default function Team() {
                 />
 
                 <TeamMember
-                    name="Gaba"
+                    name="Dieguinchis"
                     role="Desarrollador Frontend"
                     image="/logo_developer.png"
                     delay={0.4}

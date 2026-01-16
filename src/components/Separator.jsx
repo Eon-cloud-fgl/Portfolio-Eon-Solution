@@ -2,14 +2,11 @@ import '../styles/separator.css';
 
 export default function Marquee({ title }) {
     return (
-        <div className="separator-marquee-container">
-            <div className="separator-marquee">
-                <span>
-                    {title} {title} {title} {title} {title} {title} {title} {title} {title} 
-                </span>
-                <span>
-                    {title} {title} {title} {title} {title} {title} {title} {title} {title} 
-                </span>
+        <div className="news-marquee">
+            <div className="marquee-track">
+                {[...Array(4)].map((_, i) => (
+                    <span key={i}>{title}</span>
+                ))}
             </div>
         </div>
     );

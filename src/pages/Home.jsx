@@ -16,8 +16,10 @@ export default function Home() {
                 <Services />
                 <Languages />
                 <About />
-                <Projects />
-                <Team />
+                <div className='bg-fusion'>
+                    <Projects />
+                    <Team />
+                </div>
                 <News />
                 <Footer />
             </div>

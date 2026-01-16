@@ -24,7 +24,7 @@ export default function Services() {
                     alt=""
                 />
                 <p className="services-description">
-                    En EON Solutions nos enfocamos en potenciar cada aspecto de tu empresa mediante
+                    En Otter Solutions nos enfocamos en potenciar cada aspecto de tu empresa mediante
                     estrategias personalizadas y tecnología de vanguardia. Desde el desarrollo web hasta
                     el marketing digital y la consultoría tecnológica, nuestro objetivo es crear experiencias
                     únicas que conecten con tus clientes, optimicen tus procesos internos y fortalezcan tu
